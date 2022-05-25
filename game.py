@@ -49,7 +49,7 @@ class TicTacToe:
 
         #check column    
         col_index = square % 3
-        column = [self.board[col_index*3] for i in range(3)]
+        column = [self.board[col_index+i*3] for i in range(3)]
         if all([spot == letter for spot in column]):
             return True
 
